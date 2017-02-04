@@ -1,7 +1,7 @@
 angular.module("cat", ["ui.router"]).config(function($stateProvider, $urlRouterProvider) {
 
 $urlRouterProvider.otherwise('/home');
-var baseUrl = /local|127/.test(window.location.hostname) ? '' : '/caits24site';
+var baseUrl = /local|127/.test(window.location.hostname) ? '' : '/caitsBDay';
 $stateProvider
 
 .state('home', {

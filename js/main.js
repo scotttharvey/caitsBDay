@@ -7,22 +7,22 @@ $stateProvider
 .state('home', {
   url: "/home",
   controller: "homeCtrl",
-  templateUrl: baseUrl + "views/home-tmpl.html"
+  templateUrl: baseUrl + "/views/home-tmpl.html"
 })
 .state('love', {
   url: "/love",
   controller: "loveCtrl",
-  templateUrl: baseUrl + "views/love.html"
+  templateUrl: baseUrl + "/views/love.html"
 })
 .state('feel', {
   url: "/feel",
   controller: "feelCtrl",
-  templateUrl: baseUrl + "views/feel.html"
+  templateUrl: baseUrl + "/views/feel.html"
 })
 .state('kiss', {
   url: "/kiss",
   controller: "kissCtrl",
-  templateUrl: baseUrl + "views/kiss.html"
+  templateUrl: baseUrl + "/views/kiss.html"
 })
 
 })

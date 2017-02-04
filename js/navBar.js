@@ -1,6 +1,6 @@
 angular.module("cat").directive("navBar", function(){
   return {
-    templateUrl: baseUrl + '/views/navBar-tmpl.html',
+    templateUrl: '/views/navBar-tmpl.html',
     restric: "EA",
     scope: {
 
@@ -14,5 +14,3 @@ angular.module("cat").directive("navBar", function(){
 
   };
 });
-var event = new Event('lastJsLoaded');
-document.dispatchEvent(event);

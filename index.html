@@ -1,38 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="cat">
   <head>
-    <script>
-    var baseUrl = /local|127/.test(window.location.hostname) ? '' : '/caitsBDay';
-    var jsFiles = ["/js/main.js", "/js/homeCtrl.js", "/js/kissCtrl.js", "/js/loveCtrl.js", "/js/feelCtrl.js", "/js/navBar.js"]
-    var cssFiles = ["/css/reset.css", "/css/master.css"]
-    document.addEventListener("DOMContentLoaded", function(event) {
-        document.addEventListener('lastJsLoaded', function(e) {
-            angular.bootstrap(document, ['cat']);
-        });
-        cssFiles.forEach(function(e) {
-            loadjscssfile(e, "css");
-        })
-        jsFiles.forEach(function(e) {
-            loadjscssfile(e, "js");
-        })
-    });
-
-    function loadjscssfile(filename, filetype) {
-        if (filetype === "js") {
-            var fileref = document.createElement('script')
-            fileref.setAttribute("type", "text/javascript")
-            fileref.setAttribute("src", baseUrl + filename)
-            document.getElementById("custom-inject").appendChild(fileref);
-        } else if (filetype === "css") {
-            var fileref = document.createElement("link")
-            fileref.setAttribute("rel", "stylesheet")
-            fileref.setAttribute("type", "text/css")
-            fileref.setAttribute("href", baseUrl + filename)
-            document.getElementsByTagName("head")[0].appendChild(fileref);
-        }
-    }
-</script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
@@ -41,19 +9,20 @@
   </head>
   <body ng-controller="homeCtrl">
     <main>
+
       <ui-view></ui-view>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
     <script src="https://use.fontawesome.com/4188cf5183.js"></script>
-    <!-- <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/homeCtrl.js"></script>
     <script src="js/loveCtrl.js"></script>
     <script src="js/feelCtrl.js"></script>
     <script src="js/kissCtrl.js"></script>
-    <script src="js/navBar.js"></script> -->
-    <span id="custom-inject"></span>
+    <script src="js/navBar.js"></script>
+
 
   </body>
 </html>

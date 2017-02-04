@@ -1,28 +1,28 @@
 angular.module("cat", ["ui.router"]).config(function($stateProvider, $urlRouterProvider) {
 
 $urlRouterProvider.otherwise('/home');
-
+var baseUrl = /local|127/.test(window.location.hostname) ? '' : '/caits24site';
 $stateProvider
 
 .state('home', {
   url: "/home",
   controller: "homeCtrl",
-  templateUrl: "views/home-tmpl.html"
+  templateUrl: baseUrl + "views/home-tmpl.html"
 })
 .state('love', {
   url: "/love",
   controller: "loveCtrl",
-  templateUrl: "views/love.html"
+  templateUrl: baseUrl + "views/love.html"
 })
 .state('feel', {
   url: "/feel",
   controller: "feelCtrl",
-  templateUrl: "views/feel.html"
+  templateUrl: baseUrl + "views/feel.html"
 })
 .state('kiss', {
   url: "/kiss",
   controller: "kissCtrl",
-  templateUrl: "views/kiss.html"
+  templateUrl: baseUrl + "views/kiss.html"
 })
 
 })
